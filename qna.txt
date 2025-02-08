@@ -1,71 +1,156 @@
-What is sign-magnitude representation?%%%%%A method to represent signed integers where the first bit indicates the sign and the remaining bits represent the magnitude.  
+Error%%%%%Error
+What is sign-magnitude?%%%%%A representation of signed numbers using one bit for the sign and the rest for the magnitude.  
 
-Q: How do you determine the sign in sign-magnitude representation?  
-A: The first bit (0 for positive, 1 for negative) indicates the sign.  
+Q: How is the sign indicated in sign-magnitude?  
+A: The sign is indicated by the most significant bit (0 for positive, 1 for negative).  
 
-Q: What is the range of values for an 8-bit sign-magnitude representation?  
+Q: What is the range of an 8-bit sign-magnitude number?  
 A: -127 to +127.  
 
-Q: How is zero represented in sign-magnitude representation?  
-A: Both +0 (00000000) and -0 (10000000) exist, causing ambiguity.  
+Q: How do you convert a positive number to sign-magnitude?  
+A: Set the most significant bit to 0 and use the remaining bits for the absolute value.  
 
-Q: What are the main drawbacks of sign-magnitude representation?  
-A: Complexity in arithmetic operations and representation of two zeros.  
+Q: How do you convert a negative number to sign-magnitude?  
+A: Set the most significant bit to 1 and use the remaining bits for the absolute value.  
 
-Q: How do you convert a positive decimal number to sign-magnitude?  
-A: Set the sign bit to 0 and the remaining bits to the binary equivalent of the magnitude.  
+Q: Is sign-magnitude commonly used in modern computing?  
+A: No, it is less common than two's complement.  
 
-Q: How do you convert a negative decimal number to sign-magnitude?  
-A: Set the sign bit to 1 and the remaining bits to the binary equivalent of the magnitude.
-What does the sign of a number indicate?%%%%%Its positivity or negativity.
-Error%%%%%Error
-What is 3 minus 102?%%%%%-99
-What bit in a binary number is used for the sign?%%%%%The left-most bit.  
+Q: What is a drawback of sign-magnitude representation?  
+A: It has two representations for zero (+0 and -0).  
 
-Q: What does the remainder of the sequence in a signed binary number represent?  
-A: The absolute value of the number.
-What is the maximum value of a 4-bit unsigned integer?%%%%%15  
+Q: What is the simplest method for adding sign-magnitude numbers?  
+A: Convert to decimal, add, and convert back to sign-magnitude.  
 
-Q: What is the minimum value of a 4-bit signed integer in two's complement?  
-A: -8  
+Q: How do you represent the number -5 in sign-magnitude using 8 bits?  
+A: 10000101.  
 
-Q: How many unique values can a 4-bit binary number represent?  
-A: 16  
+Q: What happens during the addition of two sign-magnitude numbers with different signs?  
+A: Subtract the magnitudes and keep the sign of the larger magnitude.
+What does the first bit represent in binary numbers?%%%%%The sign of the number.
+What does 0001 represent in 4-bit binary?%%%%%1  
 
-Q: What is the binary representation of the decimal number 5 in 4 bits?  
-A: 0101  
+Q: What does 1001 represent in 4-bit binary?  
+A: -1  
 
-Q: What is the binary representation of -3 in 4-bit two's complement?  
-A: 1101  
+Q: What does 0010 represent in 4-bit binary?  
+A: 2  
 
-Q: What is the decimal equivalent of the binary number 1110 in 4 bits?  
-A: 14  
+Q: What does 1110 represent in 4-bit binary?  
+A: -2
+Convert 1101 to denary.%%%%%5  
 
-Q: What is the binary representation of the decimal number 0 in 4 bits?  
-A: 0000  
+Q: Convert 1010 to denary.  
+A: 2  
 
-Q: What is the binary representation of the decimal number 8 in 4 bits?  
+Q: Convert 1110 to denary.  
+A: 6  
+
+Q: Convert 1001 to denary.  
+A: 1  
+
+Q: Convert 0111 to denary.  
+A: 7
+What is the range of a 4-bit signed integer?%%%%%-7 to 7.
+What is the representation of positive zero in this format?%%%%%0000
+
+Q: What is the representation of negative zero in this format?  
+A: 1000
+
+Q: How many representations of zero exist in this format?  
+A: Two
+
+Q: What does 0000 represent?  
+A: 0
+
+Q: What does 1000 represent?  
+A: -0
+What does excess refer to in finance?%%%%%An amount beyond what is necessary.
+
+Q: How can offsetting work in accounting?  
+A: By balancing out a debt with credits or claims.
+
+Q: What's an example of an excess?  
+A: Excess revenue over expenses.
+
+Q: What is a common use of "offset" in tax?  
+A: Reducing taxable income by expenses or losses.
+
+Q: What does "excess baggage" mean?  
+A: Luggage that exceeds weight limits.
+
+Q: Can excess also refer to an insurance deductible?  
+A: Yes, it often indicates an amount paid before benefits kick in.
+
+Q: What is an excess in inventory?  
+A: Stock that exceeds demand.
+
+Q: How does excess capacity affect a business?  
+A: It can lead to inefficiency and higher costs.
+
+Q: In health care, what does excess usually indicate?  
+A: Overutilization of services compared to need. 
+
+Q: What is excess profit?  
+A: Earnings above normal or expected levels.
+What is the decimal value of 0000 in 4-bit signed representation?%%%%%-8  
+
+Q: What is the decimal value of 1000 in 4-bit signed representation?  
+A: 0  
+
+Q: What is the decimal value of 1111 in 4-bit signed representation?  
+A: 7  
+
+Q: What is the decimal value of 0111 in 4-bit signed representation?  
+A: 7
+What is the denary equivalent of the binary number 1101 using the method of adding all bits and subtracting 2n-1?%%%%%3  
+
+Q: Convert the binary number 1010 to denary using the specified method.  
+A: 6  
+
+Q: What is the denary value of the binary number 1110 using the addition and subtraction method?  
+A: 6  
+
+Q: For the binary number 0001, what is the resulting denary value?  
+A: 0  
+
+Q: Convert the binary number 1001 to denary with the described calculation method.  
+A: 4  
+
+Q: What is the denary equivalent of the binary number 0101 based on the add and subtract method?  
+A: 2  
+
+Q: Find the denary value of the binary number 0011 using the given technique.  
+A: 1  
+
+Q: Calculate the denary value of the binary number 1111 using the addition and subtraction approach.  
+A: 4
+What is the range of a 4-bit signed integer in Q format?%%%%%-8 to 7.
+What is 3 + 2?%%%%%5  
+
+Q: What is 1000 - 500?  
+A: 500  
+
+Q: What is 7 * 6?  
+A: 42  
+
+Q: What is 15 / 3?  
+A: 5  
+
+Q: What is 999 + 1?  
 A: 1000  
 
-Q: How do you represent the number 7 in a 4-bit binary?  
-A: 0111  
+Q: What is 1000 - 1?  
+A: 999  
 
-Q: What is the largest negative number in 4-bit two's complement?  
-A: -8
-What is +3 in binary using 4 bits?%%%%%0011
-What is the binary representation of -3 in 4-bit Two's Complement?%%%%%1101
-What is the sum of 2 and 3?%%%%%5
+Q: What is 500 + 500?  
+A: 1000  
 
-Q: What do you get when you add 10 and 7?  
-A: 17
+Q: What is 2000 - 1000?  
+A: Out of range  
 
-Q: What is 15 plus 25?  
-A: 40
+Q: What is 1000 + 1?  
+A: Out of range  
 
-Q: How much is 8 and 6 together?  
-A: 14
-
-Q: What is the result of adding 100 and 250?  
-A: 350
-What is the result of adding two negative numbers?%%%%%A negative number.
-What is an issue with the current representation?%%%%%It wastes representation by having two 0's.
+Q: What is 0 + 1000?  
+A: 1000

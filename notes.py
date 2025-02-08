@@ -1,4 +1,4 @@
-def upload_txt(self):
+def upload_Summmarised_notes(self):
         
         uploaded_file = st.file_uploader("Choose a file", type=["txt"])
 

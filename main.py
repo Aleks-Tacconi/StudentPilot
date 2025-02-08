@@ -62,6 +62,10 @@ class Application:
         if st.session_state.right_arrow:
             self.__next_flash_card.render(right)
 
+        total_flashcards = len(StFlashCard.all)
+        progress = (st.session_state.button_index + 1) / total_flashcards
+        st.progress(progress)
+
         st.markdown("---")
 
         self.__quote.render()

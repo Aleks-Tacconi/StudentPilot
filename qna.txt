@@ -1,0 +1,3 @@
+What is 2+2?%%%%%4
+What is the radius of a circle?%%%%%The radius of a circle is the distance from the center of the circle to any point on its circumference. It is half the length of the diameter.
+How do I calculate the circumference of a circle?%%%%%To calculate the circumference of a circle, use the formula: C = 2πr, where C is the circumference and r is the radius of the circle. Alternatively, if you have the diameter (d) of the circle, you can use the formula: C = πd.

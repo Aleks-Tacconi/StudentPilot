@@ -12,5 +12,5 @@ class Quote:
         st.session_state.quote = quote
 
     def render(self) -> None:
-        st.button("Insire me", type="secondary", on_click=self.change_quote)
+        st.button("Inspire me", type="secondary", on_click=self.change_quote)
         st.write(st.session_state.quote)

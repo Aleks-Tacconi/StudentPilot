@@ -53,6 +53,9 @@ class Application:
         button = list(StFlashCard.all.values())[st.session_state.button_index]
         self.__current_button_label = button.button_label()
 
+        for _ in range(10):
+            st.html("<br>")
+
         left, _, middle, _, right = st.columns([1, 1, 8, 1, 1])
 
         StFlashCard.all[self.__current_button_label].render(middle)
@@ -66,8 +69,9 @@ class Application:
         progress = (st.session_state.button_index + 1) / total_flashcards
         st.progress(progress)
 
-        st.markdown("---")
-        st.audio("soundFx/Lost in the Waves of Pain.wav", format="audio/mpeg", loop=True)
+        for _ in range(60):
+            st.html("<br>")
+        st.audio("soundFx/Lost in the Waves of Pain.wav", format="audio/mpeg", loop=True, autoplay=True)
         self.__quote.render()
 
     def main(self) -> None:

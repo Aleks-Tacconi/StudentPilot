@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-Binary Representations
-Sign-magnitude
-First Bit represents the sign of the number.
-Examples (4 bits): 0001= 1 and 1001= -1.
-Converting to Denary: Ignore first bit and add up the rest. First bit is sign.
-Range: -2n-1 – 1 to  2n-1 – 1 so for 4 bits it would be -7 to 7.
-Note: Has two representations of 0, 0000 = 0 and 1000 = -0.
-
-=======
 Sign-magnitude representation
 The sign of a number is stored as an additional piece of information.
 This corresponds to our usual mathematical notation
@@ -17,4 +7,3 @@ We use 0 for + and 1 for -
 In a 4-bit representation
 +3 is represented as 0011
 -3 is represented as 1011
->>>>>>> 0e88b94137af3a34d983e881d3faf8fc135ed3df

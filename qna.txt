@@ -1,0 +1,19 @@
+1. What is the primary purpose of sign-magnitude representation?%%%%%To store the sign of a number as an additional piece of information.
+  
+2. In sign-magnitude representation, how is the sign of a number indicated?%%%%%Using one of the bits, usually the left-most bit.
+
+3. What binary value is used to represent a positive sign in sign-magnitude representation?%%%%%0
+
+4. What binary value is used to represent a negative sign in sign-magnitude representation?%%%%%1
+
+5. How is the number +3 represented in a 4-bit sign-magnitude system?%%%%%0011
+
+6. How is the number -3 represented in a 4-bit sign-magnitude system?%%%%%1011
+
+7. What part of the binary sequence in sign-magnitude representation is used to represent the absolute value of the number?%%%%%The remainder of the sequence, after the sign bit.
+
+8. In the sign-magnitude format, how would -102 be represented with adequate bits?%%%%%Assuming more than 4 bits, it would be represented with a sign bit of 1 followed by the binary equivalent of 102.
+
+9. If a number is represented as 1100 in sign-magnitude, what is its decimal value?%%%%%-4 (the sign is negative and the absolute value is 4).
+
+10. How many bits are used in the example for expressing both positive and negative numbers?%%%%%4 bits

@@ -1,71 +1,86 @@
-What is sign-magnitude representation?%%%%%A method to represent signed integers where the first bit indicates the sign and the remaining bits represent the magnitude.  
+What is sign-magnitude representation?%%%%%A binary encoding system for representing signed numbers, where the most significant bit indicates the sign.  
 
-Q: How do you determine the sign in sign-magnitude representation?  
-A: The first bit (0 for positive, 1 for negative) indicates the sign.  
+Q: How is the sign represented in sign-magnitude?  
+A: 0 for positive and 1 for negative.  
 
-Q: What is the range of values for an 8-bit sign-magnitude representation?  
+Q: What does the remaining bits represent?  
+A: The magnitude of the number.  
+
+Q: What is the range for an 8-bit sign-magnitude representation?  
 A: -127 to +127.  
 
-Q: How is zero represented in sign-magnitude representation?  
-A: Both +0 (00000000) and -0 (10000000) exist, causing ambiguity.  
+Q: Is there a representation for zero in sign-magnitude?  
+A: Yes, there are two representations: +0 and -0.  
 
-Q: What are the main drawbacks of sign-magnitude representation?  
-A: Complexity in arithmetic operations and representation of two zeros.  
+Q: What is a drawback of sign-magnitude representation?  
+A: It has two representations for zero and is less efficient for arithmetic operations.  
 
 Q: How do you convert a positive decimal number to sign-magnitude?  
-A: Set the sign bit to 0 and the remaining bits to the binary equivalent of the magnitude.  
+A: Convert to binary and add a 0 as the most significant bit.  
 
 Q: How do you convert a negative decimal number to sign-magnitude?  
-A: Set the sign bit to 1 and the remaining bits to the binary equivalent of the magnitude.
-What does the sign of a number indicate?%%%%%Its positivity or negativity.
-Error%%%%%Error
+A: Convert the absolute value to binary and add a 1 as the most significant bit.
+What does the sign of a number indicate?%%%%%Whether the number is positive or negative.
+
+Q: How is the sign typically represented in numeric systems?  
+A: With a plus (+) for positive and minus (-) for negative.
+
+Q: What is the sign of zero?  
+A: Neutral; it has no sign.
+
+Q: Can a number have multiple signs at once?  
+A: No, a number has one sign at a time.
+
+Q: What is the sign of -5?  
+A: Negative.
+
+Q: What is the sign of +10?  
+A: Positive.
+
+Q: In computing, how might the sign of a number be represented?  
+A: Using a sign bit.
+
+Q: What does the term "signed number" mean?  
+A: A number that includes a sign indicator (positive or negative).
+
+Q: What does "unsigned number" mean?  
+A: A number that only represents non-negative values.
+
+Q: Can the sign of a number change?  
+A: Yes, it can change based on operations.
+What is the formula for the area of a circle?%%%%%A = πr²  
+
+Q: How do you calculate the slope of a line?  
+A: Slope (m) = (y₂ - y₁) / (x₂ - x₁)  
+
+Q: What is the quadratic formula?  
+A: x = (-b ± √(b² - 4ac)) / 2a  
+
+Q: What is Pythagoras' theorem?  
+A: a² + b² = c²  
+
+Q: What is the exponential function?  
+A: f(x) = e^x  
+
+Q: What does the derivative of a function represent?  
+A: The rate of change of the function.  
+
+Q: What is the integral of a function?  
+A: The area under the curve of the function.  
+
+Q: What is the sum of interior angles in a triangle?  
+A: 180 degrees.  
+
+Q: What are the three laws of thermodynamics?  
+A: 1) Energy conservation, 2) Entropy increases, 3) Absolute zero is unattainable.  
+
+Q: What is the formula for the circumference of a circle?  
+A: C = 2πr or C = πd.
 What is 3 minus 102?%%%%%-99
-What bit in a binary number is used for the sign?%%%%%The left-most bit.  
+What is the left-most bit used for in a binary representation?%%%%%The sign.  
 
-Q: What does the remainder of the sequence in a signed binary number represent?  
+Q: What does the remainder of the sequence in binary represent?  
 A: The absolute value of the number.
-What is the maximum value of a 4-bit unsigned integer?%%%%%15  
-
-Q: What is the minimum value of a 4-bit signed integer in two's complement?  
-A: -8  
-
-Q: How many unique values can a 4-bit binary number represent?  
-A: 16  
-
-Q: What is the binary representation of the decimal number 5 in 4 bits?  
-A: 0101  
-
-Q: What is the binary representation of -3 in 4-bit two's complement?  
-A: 1101  
-
-Q: What is the decimal equivalent of the binary number 1110 in 4 bits?  
-A: 14  
-
-Q: What is the binary representation of the decimal number 0 in 4 bits?  
-A: 0000  
-
-Q: What is the binary representation of the decimal number 8 in 4 bits?  
-A: 1000  
-
-Q: How do you represent the number 7 in a 4-bit binary?  
-A: 0111  
-
-Q: What is the largest negative number in 4-bit two's complement?  
-A: -8
-What is +3 in binary using 4 bits?%%%%%0011
-What is the binary representation of -3 in 4-bit Two's Complement?%%%%%1101
-What is the sum of 2 and 3?%%%%%5
-
-Q: What do you get when you add 10 and 7?  
-A: 17
-
-Q: What is 15 plus 25?  
-A: 40
-
-Q: How much is 8 and 6 together?  
-A: 14
-
-Q: What is the result of adding 100 and 250?  
-A: 350
-What is the result of adding two negative numbers?%%%%%A negative number.
-What is an issue with the current representation?%%%%%It wastes representation by having two 0's.
+Error%%%%%Error
+What is +3 in binary?%%%%%0011
+What is the binary representation of -3 using 4 bits?%%%%%1101

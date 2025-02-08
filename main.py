@@ -6,7 +6,7 @@ from components import FlashCard
 from components import CardNavigation
 from components import Quote
 
-from upload import UploadFile
+from pages import UploadFile
 
 
 def gen_flashcards() -> None:
@@ -44,7 +44,7 @@ class Application:
         self.__current_button_label = None
 
     def page_1(self) -> None:
-        self.__upload_page.title()
+        self.__upload_page.render()
         self.__upload_page.upload_txt()
 
     def page_2(self) -> None:

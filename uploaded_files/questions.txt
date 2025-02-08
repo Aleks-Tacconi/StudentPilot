@@ -7,8 +7,3 @@ We use 0 for + and 1 for -
 In a 4-bit representation
 +3 is represented as 0011
 -3 is represented as 1011
-The issue with this approach is arithmetic:
-Adding two positive numbers works
-Adding two negative numbers works
-Adding two negative does not work
-Another issue with this approach is that there is two 0’s which is wasting a representation

@@ -12,9 +12,13 @@ from upload import UploadFile
 def gen_flashcards() -> None:
     with open("qna.txt", mode="r", encoding="utf-8") as f:
         for line in f.readlines():
-            question, answer = line.strip().split("%%%%%")
-            flash_card = FlashCard(question, answer)
-            StFlashCard(flash_card)
+            try:
+                question, answer = line.strip().split("%%%%%")
+                if question != "Error":
+                    flash_card = FlashCard(question, answer)
+                    StFlashCard(flash_card)
+            except Exception:
+                pass
 
 
 class Application:
@@ -37,14 +41,18 @@ class Application:
         if "page" not in st.session_state:
             st.session_state.page = "page_1"
 
-        button = list(StFlashCard.all.values())[st.session_state.button_index]
-        self.__current_button_label = button.button_label()
+        self.__current_button_label = None
 
     def page_1(self) -> None:
         self.__upload_page.title()
         self.__upload_page.upload_txt()
 
     def page_2(self) -> None:
+        gen_flashcards()
+
+        button = list(StFlashCard.all.values())[st.session_state.button_index]
+        self.__current_button_label = button.button_label()
+
         left, _, middle, _, right = st.columns([1, 1, 8, 1, 1])
 
         StFlashCard.all[self.__current_button_label].render(middle)
@@ -64,9 +72,8 @@ class Application:
         elif st.session_state.page == "page_2":
             self.page_2()
 
-def main() -> None:
-    gen_flashcards()
 
+def main() -> None:
     app = Application()
     app.main()
 

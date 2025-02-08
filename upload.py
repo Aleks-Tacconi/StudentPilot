@@ -60,7 +60,7 @@ class UploadFile:
             )
             st.write("📝 Flashcards Preview:")
             st.dataframe(flashcards_df)
-            os.system("python qna.py")
+            os.system("python gen_qna.py")
 
             if st.button("See Status ➡️"):
                 self.switch_to_status()

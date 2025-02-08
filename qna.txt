@@ -1,3 +1,71 @@
-What is 2+2?%%%%%4
-What is the radius of a circle?%%%%%The radius of a circle is the distance from the center of the circle to any point on its circumference. It is half the length of the diameter.
-How do I calculate the circumference of a circle?%%%%%To calculate the circumference of a circle, use the formula: C = 2πr, where C is the circumference and r is the radius of the circle. Alternatively, if you have the diameter (d) of the circle, you can use the formula: C = πd.
+What is sign-magnitude representation?%%%%%A method to represent signed integers where the first bit indicates the sign and the remaining bits represent the magnitude.  
+
+Q: How do you determine the sign in sign-magnitude representation?  
+A: The first bit (0 for positive, 1 for negative) indicates the sign.  
+
+Q: What is the range of values for an 8-bit sign-magnitude representation?  
+A: -127 to +127.  
+
+Q: How is zero represented in sign-magnitude representation?  
+A: Both +0 (00000000) and -0 (10000000) exist, causing ambiguity.  
+
+Q: What are the main drawbacks of sign-magnitude representation?  
+A: Complexity in arithmetic operations and representation of two zeros.  
+
+Q: How do you convert a positive decimal number to sign-magnitude?  
+A: Set the sign bit to 0 and the remaining bits to the binary equivalent of the magnitude.  
+
+Q: How do you convert a negative decimal number to sign-magnitude?  
+A: Set the sign bit to 1 and the remaining bits to the binary equivalent of the magnitude.
+What does the sign of a number indicate?%%%%%Its positivity or negativity.
+Error%%%%%Error
+What is 3 minus 102?%%%%%-99
+What bit in a binary number is used for the sign?%%%%%The left-most bit.  
+
+Q: What does the remainder of the sequence in a signed binary number represent?  
+A: The absolute value of the number.
+What is the maximum value of a 4-bit unsigned integer?%%%%%15  
+
+Q: What is the minimum value of a 4-bit signed integer in two's complement?  
+A: -8  
+
+Q: How many unique values can a 4-bit binary number represent?  
+A: 16  
+
+Q: What is the binary representation of the decimal number 5 in 4 bits?  
+A: 0101  
+
+Q: What is the binary representation of -3 in 4-bit two's complement?  
+A: 1101  
+
+Q: What is the decimal equivalent of the binary number 1110 in 4 bits?  
+A: 14  
+
+Q: What is the binary representation of the decimal number 0 in 4 bits?  
+A: 0000  
+
+Q: What is the binary representation of the decimal number 8 in 4 bits?  
+A: 1000  
+
+Q: How do you represent the number 7 in a 4-bit binary?  
+A: 0111  
+
+Q: What is the largest negative number in 4-bit two's complement?  
+A: -8
+What is +3 in binary using 4 bits?%%%%%0011
+What is the binary representation of -3 in 4-bit Two's Complement?%%%%%1101
+What is the sum of 2 and 3?%%%%%5
+
+Q: What do you get when you add 10 and 7?  
+A: 17
+
+Q: What is 15 plus 25?  
+A: 40
+
+Q: How much is 8 and 6 together?  
+A: 14
+
+Q: What is the result of adding 100 and 250?  
+A: 350
+What is the result of adding two negative numbers?%%%%%A negative number.
+What is an issue with the current representation?%%%%%It wastes representation by having two 0's.

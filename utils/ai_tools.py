@@ -15,7 +15,8 @@ def generate_question_answer(note: str) -> tuple:
                 {"role": "system", "content": "You are a helpful revision assistant."},
                 {
                     "role": "user",
-                    "content": note + " In the format of Q: <question> A: <answer>",
+                    "content": note
+                    + " In the format of Q: <question> A: <answer> Short answers only",
                 },
             ],
         )

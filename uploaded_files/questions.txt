@@ -5,9 +5,4 @@ Examples (4 bits): 0001= 1 and 1001= -1.
 Converting to Denary: Ignore first bit and add up the rest. First bit is sign.
 Range: -2n-1 – 1 to  2n-1 – 1 so for 4 bits it would be -7 to 7.
 Note: Has two representations of 0, 0000 = 0 and 1000 = -0.
-Excess (Offset)
-First bit (0) represents the negative of that bit. 
-Examples (4 bits): 0000 = -8 and 1000 = 0.
-Converting to Denary: add up all bits then subtract 2n-1.
-Range: -2n-1 to  2n-1 – 1 so for 4 bits it would be -8 to 7.
-Note: Arithmetic does not work if the sum is out of range and our bias is 0 = 1000….
+

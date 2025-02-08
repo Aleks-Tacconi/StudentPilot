@@ -67,7 +67,7 @@ class Application:
         st.progress(progress)
 
         st.markdown("---")
-
+        st.audio("soundFx/Lost in the Waves of Pain.wav", format="audio/mpeg", loop=True)
         self.__quote.render()
 
     def main(self) -> None:

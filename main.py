@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import time
 
 class Application:
     def __init__(self) -> None:
@@ -18,5 +19,26 @@ def main() -> None:
     app = Application()
     app.main()
 
-if __name__ == "__main__":
-    main()
+latest_iteration = st.empty()
+bar = st.progress(0)
+
+for i in range(100):
+  # Update the progress bar with each iteration.
+  latest_iteration.text(f'Iteration {i+1}')
+  bar.progress(i + 1)
+  time.sleep(0.1)
+
+import streamlit as st
+import time
+
+# Title
+st.title("📚 Study Timer")
+
+# User input for timer duration
+study_time = st.slider("Set study time (minutes):", min_value=1, max_value=120, value=1)
+
+# Convert to seconds
+total_seconds = study_time * 60
+
+# Start button
+

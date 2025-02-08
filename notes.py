@@ -9,7 +9,7 @@ def upload_txt(self):
 
             # Proceed with OpenAI API call if content is not None
             if content:
-                client = OpenAI(api_key = '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' )
+                client = OpenAI(os.environ.get("OPENAI_API_KEY"))
                 response = client.chat.completions.create(model="gpt-4o-mini-2024-07-18", messages=[
                     {"role": "system", "content": "You are a helpful assistant, generate summarised notes in markdown format"},
                     {"role": "user", "content": content},

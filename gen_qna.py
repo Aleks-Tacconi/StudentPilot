@@ -5,7 +5,7 @@ import os
 def main() -> None:
     qna = {}
 
-    with open("questions.txt", mode="r", encoding="utf-8") as f:
+    with open(os.path.join("uploaded_file", "questions.txt"), mode="r", encoding="utf-8") as f:
         for note in f.readlines():
             question, answer = generate_question_answer(note)
 

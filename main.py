@@ -6,6 +6,8 @@ from components import FlashCard
 from components import CardNavigation
 from components import Quote
 
+from upload import UploadFile
+
 
 def gen_flashcards() -> None:
     with open("qna.txt", mode="r", encoding="utf-8") as f:
@@ -21,6 +23,8 @@ class Application:
         self.__next_flash_card = CardNavigation(1, "\>")
         self.__quote = Quote()
 
+        self.__upload_page = UploadFile()
+
         if "button_index" not in st.session_state:
             st.session_state.button_index = 0
 
@@ -30,10 +34,17 @@ class Application:
         if "right_arrow" not in st.session_state:
             st.session_state.right_arrow = True
 
+        if "page" not in st.session_state:
+            st.session_state.page = "page_1"
+
         button = list(StFlashCard.all.values())[st.session_state.button_index]
         self.__current_button_label = button.button_label()
 
-    def main(self) -> None:
+    def page_1(self) -> None:
+        self.__upload_page.title()
+        self.__upload_page.upload_txt()
+
+    def page_2(self) -> None:
         left, _, middle, _, right = st.columns([1, 1, 8, 1, 1])
 
         StFlashCard.all[self.__current_button_label].render(middle)
@@ -46,6 +57,12 @@ class Application:
         st.markdown("---")
 
         self.__quote.render()
+
+    def main(self) -> None:
+        if st.session_state.page == "page_1":
+            self.page_1()
+        elif st.session_state.page == "page_2":
+            self.page_2()
 
 def main() -> None:
     gen_flashcards()

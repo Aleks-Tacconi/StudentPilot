@@ -4,7 +4,6 @@ from openai import OpenAI
 
 
 def generate_question_answer(note: str) -> str:
-    print("API CALL")
     key = os.getenv("OPENAI_API_KEY")
     gpt = OpenAI(api_key=key)
 
@@ -16,7 +15,7 @@ def generate_question_answer(note: str) -> str:
                 {
                     "role": "user",
                     "content": note
-                    + "generate 10 questions from the above content in the form {question}%%%%%{answer}\n",
+                    + "generate 10 questions from the above content in the form {question}%%%%%{answer}",
                 },
             ],
         )

@@ -1,19 +1,19 @@
-1. What is the primary purpose of sign-magnitude representation?%%%%%To store the sign of a number as an additional piece of information.
-  
-2. In sign-magnitude representation, how is the sign of a number indicated?%%%%%Using one of the bits, usually the left-most bit.
+1. What does the sign-magnitude representation store as an additional piece of information?%%%%%The sign of a number.
 
-3. What binary value is used to represent a positive sign in sign-magnitude representation?%%%%%0
+2. In sign-magnitude representation, what bit is usually used for the sign?%%%%%The left-most bit.
 
-4. What binary value is used to represent a negative sign in sign-magnitude representation?%%%%%1
+3. How is the positive sign represented in sign-magnitude representation?%%%%%0
 
-5. How is the number +3 represented in a 4-bit sign-magnitude system?%%%%%0011
+4. How is the negative sign represented in sign-magnitude representation?%%%%%1
 
-6. How is the number -3 represented in a 4-bit sign-magnitude system?%%%%%1011
+5. In a 4-bit sign-magnitude representation, how is +3 represented?%%%%%0011
 
-7. What part of the binary sequence in sign-magnitude representation is used to represent the absolute value of the number?%%%%%The remainder of the sequence, after the sign bit.
+6. In a 4-bit sign-magnitude representation, how is -3 represented?%%%%%1011
 
-8. In the sign-magnitude format, how would -102 be represented with adequate bits?%%%%%Assuming more than 4 bits, it would be represented with a sign bit of 1 followed by the binary equivalent of 102.
+7. What does the remainder of the bits in sign-magnitude representation represent?%%%%%The absolute value of the number.
 
-9. If a number is represented as 1100 in sign-magnitude, what is its decimal value?%%%%%-4 (the sign is negative and the absolute value is 4).
+8. In the sign-magnitude representation, what is the maximum positive number that can be represented with 4 bits?%%%%%+7 (represented as 0111)
 
-10. How many bits are used in the example for expressing both positive and negative numbers?%%%%%4 bits
+9. In sign-magnitude representation, how would +0 and -0 be represented in a 4-bit system?%%%%%+0 is 0000 and -0 is 1000.
+
+10. Can sign-magnitude representation represent both positive and negative values?%%%%%Yes, it can represent both positive and negative values.

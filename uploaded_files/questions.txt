@@ -1,0 +1,9 @@
+Sign-magnitude representation
+The sign of a number is stored as an additional piece of information.
+This corresponds to our usual mathematical notation
++3, -102
+One of the bits, usually the left-most, is used for the sign. The remainder of the sequence represents the absolute value of the number
+We use 0 for + and 1 for -
+In a 4-bit representation
++3 is represented as 0011
+-3 is represented as 1011

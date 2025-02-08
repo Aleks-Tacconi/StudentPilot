@@ -1,44 +1,45 @@
 import streamlit as st
-import pandas as pd
-import time
+
+from components import StFlashCard
+from components import FlashCard
+
+from components import CardNavigation
+
+
+def gen_flashcards() -> None:
+    with open("qna.txt", mode="r", encoding="utf-8") as f:
+        for line in f.readlines():
+            question, answer = line.strip().split("%%%%%")
+            flash_card = FlashCard(question, answer)
+            StFlashCard(flash_card)
+
 
 class Application:
     def __init__(self) -> None:
-        self.__data_frame = pd.DataFrame(
-            {
-                "first column": [1, 2, 3, 4],
-                "second column": [10, 20, 30, 40]
-            }
-        )
+        self.__previous_flash_card = CardNavigation(-1, "<")
+        self.__next_flash_card = CardNavigation(1, "\>")
+
+        if "button_index" not in st.session_state:
+            st.session_state.button_index = 0
+
+        button = list(StFlashCard.all.values())[st.session_state.button_index]
+        self.__current_button_label = button.button_label()
 
     def main(self) -> None:
-        st.write("my table:")
-        st.write(self.__data_frame)
+        left, _, middle, _, right = st.columns([1, 1, 8, 1, 1])
+
+        StFlashCard.all[self.__current_button_label].render(middle)
+
+        self.__previous_flash_card.render(left)
+        self.__next_flash_card.render(right)
+
 
 def main() -> None:
+    gen_flashcards()
+
     app = Application()
     app.main()
 
-latest_iteration = st.empty()
-bar = st.progress(0)
 
-for i in range(100):
-  # Update the progress bar with each iteration.
-  latest_iteration.text(f'Iteration {i+1}')
-  bar.progress(i + 1)
-  time.sleep(0.1)
-
-import streamlit as st
-import time
-
-# Title
-st.title("📚 Study Timer")
-
-# User input for timer duration
-study_time = st.slider("Set study time (minutes):", min_value=1, max_value=120, value=1)
-
-# Convert to seconds
-total_seconds = study_time * 60
-
-# Start button
-
+if __name__ == "__main__":
+    main()

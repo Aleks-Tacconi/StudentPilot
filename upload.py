@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd
 import os
 
-with open('css/style.css') as file:
-    css = file.read()
-st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+# with open('style.css') as file:
+#     css = file.read()
+# st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 class Upload_file:
     def __init__(self):
-        self.uploaded_dir = "uploaded_files"
+        self.uploaded_dir = "../uploaded_files"
         self.file_path = None
         self.flash_cards = []
 
@@ -73,8 +73,17 @@ class Upload_file:
             flashcards_df = pd.DataFrame(self.flashcards, columns=['Question', 'Answer'])
             # st.write("📝 Flashcards Preview:")
             # st.dataframe(flashcards_df)
+            if st.button("See flashcards➡️"):
+                # page is where the upload.py is
+                # going there and displaying that file
+                #st.switch_page("status")
+                st.button("Go to Status Page", on_click=self.switch_to_status)
         else:
             st.warning("No flashcards could be generated from the text file.")
+
+        def switch_to_status(self):
+            # This method will be triggered when the button is clicked
+            st.switch_page("status")
 
 
 app = Upload_file()

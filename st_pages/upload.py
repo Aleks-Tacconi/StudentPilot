@@ -8,6 +8,7 @@ from .page import Page
 
 class UploadPage(Page):
     def render(self) -> None:
+        st.title("Student Pilot ✈️ ")
         st.title("Upload Your File")
         self.sep()
         st.html("<b>Please upload a file so we can generate some notes</b>")

@@ -15,6 +15,9 @@ def gen_flashcards() -> None:
             try:
                 question, answer = line.strip().split("%%%%%")
 
+                dot_index = question.find(".")
+                question = question[dot_index + 2:]
+
                 if question.endswith("."):
                     question = question[: len(question) - 1]
                 if answer.endswith("."):

@@ -25,13 +25,10 @@ class FlashCardsPage(Page):
         self.__current_button_label = None
         self.__notes = read_file(os.path.join("db", "notes.md"))
 
-    def __on_click(self) -> None:
-        st.session_state.page = "page_1"
-        st.rerun()
-
     def render(self) -> None:
-        st.title("📝&nbsp;&nbsp;Test Yourself")
-        st.markdown("---")
+
+        st.title("Flash Cards")
+        self.sep()
         st.html("<br>")
 
         button = list(StFlashCard.all.values())[st.session_state.button_index]
@@ -51,15 +48,14 @@ class FlashCardsPage(Page):
         st.progress(progress)
 
         st.html("<br>")
-        st.html("<br>")
-        st.html("<br>")
-        st.title("📖&nbsp;&nbsp;Helpful Resources")
-        st.markdown("---")
+
+        st.title("Study Resources")
+        self.sep()
         st.markdown(self.__notes)
 
         st.sidebar.markdown(" ")
         st.sidebar.html(
-            "<h1>&nbsp;&nbsp;&nbsp;⏳&nbsp;&nbsp;&nbsp;Previous Flash Cards</h1>"
+            "<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Previous Flash Cards</h1>"
         )
         st.sidebar.markdown("---")
         for i in range(st.session_state.button_index):

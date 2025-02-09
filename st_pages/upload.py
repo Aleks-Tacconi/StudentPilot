@@ -8,8 +8,8 @@ from .page import Page
 
 class UploadPage(Page):
     def render(self) -> None:
-        st.title("📂 &nbsp;&nbsp;Upload Your File")
-        st.markdown("---")
+        st.title("Upload Your File")
+        self.sep()
         st.html("<b>Please upload a file so we can generate some notes</b>")
         self.upload_handler()
 
@@ -18,7 +18,6 @@ class UploadPage(Page):
 
         if uploaded_file is not None:
             st.success("File uploaded successfully! Generating Flash Cards...")
-            st.html("<br>")
             st.html("<br>")
             self.preview_file(uploaded_file)
 
@@ -30,8 +29,8 @@ class UploadPage(Page):
         file_content = uploaded_file.getvalue().decode("utf-8")
 
         preview = file_content
-        st.title("📖 &nbsp;&nbsp;File Preview")
-        st.markdown("---")
+        st.title("File Preview")
+        self.sep()
         stx.scrollableTextbox(preview, height=500, border=False)
 
     def save_uploaded_file(self, uploaded_file) -> None:

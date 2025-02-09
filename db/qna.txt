@@ -1,10 +1,10 @@
-1. What is a word in the context of computer data?%%%%%A word is a fixed-sized unit of data that a processor can handle as a single unit.
-2. What is the largest number that a 64-bit word can hold in unsigned representation?%%%%%The largest number that a 64-bit word can hold is 2^64-1.
-3. How many bits are in a byte?%%%%%A byte is 8 bits.
-4. What is the largest byte-sized number represented in binary?%%%%%The largest byte-sized number is 255, which is represented as binary 11111111.
-5. What is the default integer type in Java and how many bits does it use?%%%%%The default integer type in Java is int, which uses 32 bits.
-6. Describe the sign-magnitude representation method for negative numbers.%%%%%In sign-magnitude representation, one of the bits (usually the left-most) indicates the sign (0 for positive and 1 for negative), while the remaining bits represent the absolute value of the number.
-7. What is a limitation of the sign-magnitude representation when performing arithmetic?%%%%%A limitation is that adding two negative numbers does not work correctly, and it also has the issue of representing two different zeros.
-8. What range of values does excess representation cover if n = 8?%%%%%If n = 8, excess representation covers values from -128 (00000000) to 127 (11111111).
-9. How is arithmetic performed with excess representation?%%%%%To perform arithmetic in excess representation, you must add x + 2^(n-1) and y + 2^(n-1), then subtract 2^(n-1) from the result.
-10. Can the bias be changed when using excess representation?%%%%%Yes, it is possible to change the bias when using excess representation.
+1. {What is a word in the context of computer architecture?}%%%%%{A word is a fixed-sized unit of data that a processor can handle as a single unit.}
+2. {What is the largest number that a 64-bit word can hold?}%%%%%{The largest number that a 64-bit word can hold is 2^64 - 1.}
+3. {How many bits are in a byte?}%%%%%{A byte consists of 8 bits.}
+4. {What is the range of values represented by a signed byte in Java?}%%%%%{A signed byte in Java represents values from -128 to 127.}
+5. {In sign-magnitude representation, how is the sign of a number indicated?}%%%%%{The sign of a number is indicated by the left-most bit, with 0 representing positive and 1 representing negative.}
+6. {What problem arises when adding two negative numbers using sign-magnitude representation?}%%%%%{Adding two negative numbers does not work properly in sign-magnitude representation.}
+7. {What does excess representation allow for in terms of the range of numbers?}%%%%%{Excess representation allows for representation of numbers starting from -2^(n-1) to 2^(n-1) - 1.}
+8. {In an 8-bit excess representation, what does the bit string 00000000 represent?}%%%%%{In an 8-bit excess representation, the bit string 00000000 represents -128.}
+9. {What is the bias in excess representation, and how is it significant?}%%%%%{The bias in excess representation is 0, and it determines the offset from zero for the encoded numbers.}
+10. {What must be done to perform addition in excess representation?}%%%%%{To perform addition in excess representation, you must offset both numbers by adding 2^(n-1) to each before adding them and then subtract 2^(n-1) from the result.}

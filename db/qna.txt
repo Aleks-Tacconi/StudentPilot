@@ -1,10 +1,10 @@
-1. What is the primary purpose of using sign-magnitude representation in binary?%%%%%To store the sign of a number as an additional piece of information alongside its absolute value.
-2. In a 4-bit sign-magnitude representation, how is +3 represented?%%%%%0011
-3. How is -3 represented in a 4-bit sign-magnitude representation?%%%%%1011
-4. What is one significant issue with arithmetic operations in sign-magnitude representation?%%%%%Adding two negative numbers does not work correctly.
-5. What does the excess representation system start and end with when n = 8?%%%%%-128 to 127
-6. In excess representation, what is the bias when n = 8?%%%%%0
-7. How would you compute x + y in excess representation?%%%%%x + 2^(n-1) + y + 2^(n-1) - 2^(n-1)
-8. What is one of the disadvantages of the sign-magnitude representation besides arithmetic issues?%%%%%There are two representations for zero, wasting a representation.
-9. In the context of excess representation, what does the value 00000000 represent if n = 8?%%%%%-128
-10. Can the bias in excess representation be adjusted?%%%%%Yes, the bias can be changed when using excess representation.
+1. What is the sign-magnitude representation of +3 in a 4-bit format?%%%%%0011
+2. How is -3 represented in sign-magnitude using 4 bits?%%%%%1011
+3. What is one major issue when adding two negative numbers in sign-magnitude representation?%%%%%It does not work correctly (results in incorrect arithmetic).
+4. In a sign-magnitude system, how many distinct representations of zero are there?%%%%%Two (positive zero and negative zero).
+5. What is the range of numbers that can be represented in excess representation with n = 8?%%%%%-128 to 127
+6. In excess representation for n = 8, what bit string represents the value 0?%%%%%01111111 (with a bias of 128).
+7. How do you compute the sum of two numbers x and y in excess representation?%%%%%x + 2^(n-1) + y + 2^(n-1) - 2^(n-1).
+8. What is the bias in a typical excess representation system when n = 8?%%%%%0
+9. Can the bias be altered in excess representation?%%%%%Yes, it is possible to change the bias.
+10. What is the primary advantage of using excess representation over sign-magnitude?%%%%%Arithmetic operations are more straightforward and consistent.

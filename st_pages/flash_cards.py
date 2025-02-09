@@ -40,8 +40,12 @@ class FlashCardsPage(Page):
                 with st.chat_message(message["role"]):
                     st.markdown(message["content"])
 
-            prompt = st.chat_input("Enter you queries here?")
+            prompt_placeholder = st.empty()
+            prompt = prompt_placeholder.chat_input("Enter your queries here?")
+
             if prompt:
+                prompt_placeholder.empty()
+
                 st.session_state.messages.append({"role": "user", "content": prompt})
 
                 with st.chat_message("user"):
@@ -58,9 +62,9 @@ class FlashCardsPage(Page):
                     )
                     response = st.write_stream(stream)
 
-                st.session_state.messages.append({"role": "assistant", "content": response})
 
-            st.rerun()
+                st.session_state.messages.append({"role": "assistant", "content": response})
+                st.rerun()
 
     def render(self) -> None:
         st.title("Flash Cards")

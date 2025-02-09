@@ -16,6 +16,8 @@ class CardNavigation:
 
     def __cycle(self) -> None:
         st.session_state.button_index = st.session_state.button_index + self.__direction
+        st.session_state.button_index = max(0, st.session_state.button_index)
+        st.session_state.button_index = min(len(StFlashCard.all) - 1, st.session_state.button_index)
 
         if st.session_state.button_index > 0:
             st.session_state.left_arrow = True

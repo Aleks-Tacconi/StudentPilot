@@ -19,7 +19,7 @@ class StFlashCard:
 
     def __init__(self, flash_card: FlashCard) -> None:
         self.__flash_card = flash_card
-        self.__flash_card_id = self.__flash_card.question
+        self.__flash_card_id = self.__flash_card.question.replace(" ", "_")
         self.__css = read_css(
             os.path.join("components", "flash_card", "flash_card.css")
         )

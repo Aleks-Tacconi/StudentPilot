@@ -3,13 +3,15 @@ import os
 
 
 def main() -> None:
-    with open(os.path.join("uploaded_files", "questions.txt"), mode="r", encoding="utf-8") as f:
+    path = os.path.join("uploaded_files", "questions.txt")
+    with open(path, mode="r", encoding="utf-8") as f:
         note = "".join(f.readlines())
         response = generate_question_answer(note)
 
-
     with open("qna.txt", mode="w", encoding="utf-8") as f:
-        f.write(response)
+        for line in response.split("\n"):
+            if line.strip() != "":
+                f.write(line + "\n")
 
 
 if __name__ == "__main__":

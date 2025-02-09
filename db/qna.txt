@@ -1,10 +1,11 @@
-1. What is the sign-magnitude representation of +3 in a 4-bit format?%%%%%0011
-2. How is -3 represented in sign-magnitude using 4 bits?%%%%%1011
-3. What is one major issue when adding two negative numbers in sign-magnitude representation?%%%%%It does not work correctly (results in incorrect arithmetic).
-4. In a sign-magnitude system, how many distinct representations of zero are there?%%%%%Two (positive zero and negative zero).
-5. What is the range of numbers that can be represented in excess representation with n = 8?%%%%%-128 to 127
-6. In excess representation for n = 8, what bit string represents the value 0?%%%%%01111111 (with a bias of 128).
-7. How do you compute the sum of two numbers x and y in excess representation?%%%%%x + 2^(n-1) + y + 2^(n-1) - 2^(n-1).
-8. What is the bias in a typical excess representation system when n = 8?%%%%%0
-9. Can the bias be altered in excess representation?%%%%%Yes, it is possible to change the bias.
-10. What is the primary advantage of using excess representation over sign-magnitude?%%%%%Arithmetic operations are more straightforward and consistent.
+Sure! Here are ten questions based on the provided content, along with their answers:
+1. What does sign-magnitude representation utilize to indicate the sign of a number?%%%%%An additional bit, usually the left-most bit, is used for the sign.
+2. In a 4-bit sign-magnitude representation, how is +3 represented?%%%%%+3 is represented as 0011.
+3. What are the representations for -3 in a 4-bit sign-magnitude system?%%%%%-3 is represented as 1011.
+4. What is a major arithmetic issue with the sign-magnitude representation when adding two negative numbers?%%%%%Adding two negative numbers does not produce the correct result.
+5. Describe the range of numbers represented in excess representation when n = 8.%%%%%The range goes from -128 (00000000) to 127 (11111111).
+6. How does excess representation achieve its range of values?%%%%%Excess representation starts at -2^(n-1) and goes up to 2^(n-1) - 1.
+7. In excess representation, where does the value 0 fall when written in alphanumeric order?%%%%%0 will be just below the middle, with positive numbers below and negative numbers above.
+8. What is the bias when using excess representation with n = 8?%%%%%The bias is 0.
+9. What is the formula to calculate the result of x + y in excess representation?%%%%%The formula is x + y + 2^(n-1).
+10. What must be done after performing the arithmetic operation in excess representation to get the final answer?%%%%%You must subtract 2^(n-1) and decode the result.

@@ -1,6 +1,5 @@
 from abc import ABCMeta, abstractmethod
 
-class Page(metaclass=ABCMeta):
-    @abstractmethod
-    def render(self) -> None: ...
 
+class Page(metaclass=ABCMeta):
+    def render(self) -> None: ...

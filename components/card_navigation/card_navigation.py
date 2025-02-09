@@ -2,7 +2,7 @@ import os
 import streamlit as st
 from streamlit.delta_generator import DeltaGenerator
 
-from utils import read_css
+from utils import read_file
 from ..flash_card import StFlashCard
 
 
@@ -10,7 +10,7 @@ class CardNavigation:
     def __init__(self, direction: int, text: str) -> None:
         self.__direction = direction
         self.__text = text
-        self.__css = read_css(
+        self.__css = read_file(
             os.path.join("components", "card_navigation", "card_navigation.css")
         )
 

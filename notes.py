@@ -1,5 +1,4 @@
 def upload_Summmarised_notes(self):
-
     uploaded_file = st.file_uploader("Choose a file", type=["txt"])
 
     if uploaded_file is not None:

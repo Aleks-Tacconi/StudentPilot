@@ -1,0 +1,10 @@
+1. What is sign-magnitude representation?%%%%%Sign-magnitude representation is a method of storing the sign of a number as an additional piece of information, using a specific bit for the sign and the remaining bits for the absolute value of the number.
+2. How is the sign of a number indicated in sign-magnitude representation?%%%%%The sign of a number is indicated using one bit, where 0 represents a positive number (+) and 1 represents a negative number (-).
+3. In a 4-bit sign-magnitude representation, how is +3 represented?%%%%%+3 is represented as 0011 in a 4-bit sign-magnitude representation.
+4. What is the representation of -102 in sign-magnitude, assuming sufficient bits?%%%%%-102 would be represented with the highest order bit set to 1, and the absolute value of 102 in binary in the remaining bits, but a 4-bit representation is insufficient for -102.
+5. How is -3 represented in a 4-bit sign-magnitude format?%%%%%-3 is represented as 1011 in a 4-bit sign-magnitude representation.
+6. What binary value would represent +0 in sign-magnitude representation?%%%%%In a 4-bit sign-magnitude representation, +0 would be represented as 0000.
+7. Can you represent both -3 and +3 in a 4-bit sign-magnitude format without overlap?%%%%%Yes, -3 can be represented as 1011 and +3 can be represented as 0011, so there is no overlap.
+8. What is the significance of using the left-most bit in sign-magnitude representation?%%%%%The left-most bit is used to denote the sign of the number, indicating whether the number is positive or negative.
+9. In sign-magnitude representation, what does a binary value of 1100 signify?%%%%%In a 4-bit sign-magnitude representation, 1100 would represent -0, which is typically not used, as -0 is equivalent to +0.
+10. How would a 5-bit sign-magnitude representation format the number -5?%%%%%-5 would be represented as 10101 in a 5-bit sign-magnitude format, where the left-most bit denotes the negative sign and the remaining bits represent the absolute value of 5 (which is 0101 in binary).

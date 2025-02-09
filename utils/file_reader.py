@@ -1,4 +1,4 @@
-def read_css(file: str) -> str:
+def read_file(file: str) -> str:
     string_builder = ""
 
     with open(file, mode="r", encoding="utf-8") as f:

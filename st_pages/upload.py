@@ -1,14 +1,14 @@
 import os
 from .page import Page
+
 import streamlit as st
 
 
 class UploadPage(Page):
     def render(self) -> None:
-        st.title("AI-Powered Flash Cards!")
-        st.markdown("---")
-        st.html("<h2>Upload Your File 📂</h2>")
-        st.write("Welcome to trash revision. Please upload a file so we can make some flash cards.")
+        st.html("<h1>📂 &nbsp;&nbsp;Upload Your File</h1>")
+        st.html("<b>Please upload a file so we can generate some notes</b>")
+        self.upload_handler()
 
     def upload_handler(self) -> None:
         uploaded_file = st.file_uploader("Choose a file", type=["txt"])
@@ -27,7 +27,7 @@ class UploadPage(Page):
             f.write(uploaded_file.getbuffer())
 
     def create_flashcards(self) -> None:
-        os.system("python gen_qna.py")
+        os.system("python ai_handler.py")
 
     def switch_to_status(self) -> None:
         st.write("Navigating to Status Page...")

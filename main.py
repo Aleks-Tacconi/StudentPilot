@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 
 from components import StFlashCard
@@ -8,7 +10,7 @@ from st_pages import FlashCardsPage
 
 
 def gen_flashcards() -> None:
-    with open("qna.txt", mode="r", encoding="utf-8") as f:
+    with open(os.path.join("db", "qna.txt"), mode="r", encoding="utf-8") as f:
         for line in f.readlines():
             question, answer = line.strip().split("%%%%%")
 
@@ -16,6 +18,9 @@ def gen_flashcards() -> None:
                 question = question[: len(question) - 1]
             if answer.endswith("."):
                 answer = answer[: len(answer) - 1]
+
+            question = question.replace("`", "")
+            answer = answer.replace("`", "")
 
             if question != "Error":
                 flash_card = FlashCard(question, answer)
@@ -36,7 +41,6 @@ class Application:
 
     def page_1(self) -> None:
         self.__upload_page.render()
-        self.__upload_page.upload_handler()
 
     def page_2(self) -> None:
         gen_flashcards()

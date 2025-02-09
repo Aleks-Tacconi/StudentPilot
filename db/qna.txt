@@ -1,0 +1,10 @@
+1. What does the sign-magnitude representation use to indicate the sign of a number?%%%%%It uses one bit, typically the left-most bit, where 0 represents positive numbers and 1 represents negative numbers.
+2. In a 4-bit sign-magnitude representation, how is +3 represented?%%%%%+3 is represented as 0011.
+3. In a 4-bit sign-magnitude representation, how is -3 represented?%%%%%-3 is represented as 1011.
+4. What is one major issue with the sign-magnitude representation in terms of arithmetic?%%%%%One major issue is that adding two negative numbers does not yield the correct result.
+5. How many representations of zero are there in sign-magnitude representation?%%%%%There are two representations of zero: +0 (0000) and -0 (1000).
+6. What is the range of numbers that can be represented using excess representation for n = 8?%%%%%The range is from -128 (00000000) to 127 (11111111).
+7. What is the bias when using excess representation with n = 8?%%%%%The bias is 0.
+8. In excess representation, how do you perform the addition of two numbers x and y?%%%%%You calculate it as x + 2^(n-1) + y + 2^(n-1) and then subtract 2^(n-1).
+9. What is the first step in decoding the result after performing addition in excess representation?%%%%%The first step is to subtract 2^(n-1) from the result to decode it.
+10. Can the bias in excess representation be changed?%%%%%Yes, the bias can be changed when using excess representation.

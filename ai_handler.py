@@ -4,13 +4,16 @@ from utils import generate_question_answer
 from utils import generate_summmarised_notes
 from utils import convert_pdf
 
+
 def handle_other_formats() -> None:
     file = os.listdir("uploaded_files")[0]
 
     if file.endswith("pdf"):
         string = convert_pdf(os.path.join("uploaded_files", file))
 
-        with open(os.path.join("uploaded_files", "questions.txt"), mode="w+", encoding="utf-8") as f:
+        with open(
+            os.path.join("uploaded_files", "questions.txt"), mode="w+", encoding="utf-8"
+        ) as f:
             f.write(string)
 
 
@@ -24,6 +27,7 @@ def gen_flash_cards() -> None:
         for line in response.split("\n"):
             if line.strip() != "":
                 f.write(line + "\n")
+
 
 def gen_notes() -> None:
     path = os.path.join("uploaded_files", "questions.txt")
@@ -40,6 +44,7 @@ def main() -> None:
     handle_other_formats()
     gen_flash_cards()
     gen_notes()
+
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,8 @@
 import os
 import streamlit as st
 
+from openai import OpenAI
+
 from utils import read_file
 
 from components import StFlashCard
@@ -24,9 +26,43 @@ class FlashCardsPage(Page):
 
         self.__current_button_label = None
         self.__notes = read_file(os.path.join("db", "notes.md"))
+        self.__client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+
+    def __render_chat_bot(self) -> None:
+        with st.popover("Ask AI", use_container_width=True):
+            if "openai_model" not in st.session_state:
+                st.session_state["openai_model"] = "gpt-4o-mini-2024-07-18"
+
+            if "messages" not in st.session_state:
+                st.session_state.messages = []
+
+            for message in st.session_state.messages:
+                with st.chat_message(message["role"]):
+                    st.markdown(message["content"])
+
+            prompt = st.chat_input("Enter you queries here?")
+            if prompt:
+                st.session_state.messages.append({"role": "user", "content": prompt})
+
+                with st.chat_message("user"):
+                    st.markdown(prompt)
+
+                with st.chat_message("assistant"):
+                    stream = self.__client.chat.completions.create(
+                        model=st.session_state["openai_model"],
+                        messages=[
+                            {"role": m["role"], "content": m["content"] + self.__notes}
+                            for m in st.session_state.messages
+                        ],
+                        stream=True,
+                    )
+                    response = st.write_stream(stream)
+
+                st.session_state.messages.append({"role": "assistant", "content": response})
+
+            st.rerun()
 
     def render(self) -> None:
-
         st.title("Flash Cards")
         self.sep()
         st.html("<br>")
@@ -65,3 +101,5 @@ class FlashCardsPage(Page):
             st.sidebar.button(
                 args[0].replace("250", "150"), on_click=args[1], type="tertiary"
             )
+
+        self.__render_chat_bot()

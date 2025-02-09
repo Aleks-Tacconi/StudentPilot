@@ -26,7 +26,7 @@ def generate_question_answer(note: str) -> str:
         return "Error"
 
 
-def generate_quote():
+def generate_quote() -> str:
     key = os.getenv("OPENAI_API_KEY")
     gpt = OpenAI(api_key=key)
     try:
@@ -46,3 +46,21 @@ def generate_quote():
     except Exception as e:
         st.error(f"Error generating quote: {e}")
         return "Keep going, you're doing great! 💪"
+
+
+def generate_summmarised_notes(content: str) -> str:
+    key = os.getenv("OPENAI_API_KEY")
+    gpt = OpenAI(api_key=key)
+    response = gpt.chat.completions.create(
+        model="gpt-4o-mini-2024-07-18",
+        messages=[
+            {
+                "role": "system",
+                "content": f"summarise the following in markdown, split it up into sections with headings (h2 and h3) and bullet points: {content}",
+            }
+        ],
+    )
+
+    notes = response.choices[0].message.content
+
+    return notes

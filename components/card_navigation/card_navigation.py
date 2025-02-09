@@ -2,7 +2,7 @@ import os
 import streamlit as st
 from streamlit.delta_generator import DeltaGenerator
 
-from utils import read_css
+from utils import read_file
 from ..flash_card import StFlashCard
 
 
@@ -10,12 +10,14 @@ class CardNavigation:
     def __init__(self, direction: int, text: str) -> None:
         self.__direction = direction
         self.__text = text
-        self.__css = read_css(
+        self.__css = read_file(
             os.path.join("components", "card_navigation", "card_navigation.css")
         )
 
     def __cycle(self) -> None:
         st.session_state.button_index = st.session_state.button_index + self.__direction
+        st.session_state.button_index = max(0, st.session_state.button_index)
+        st.session_state.button_index = min(len(StFlashCard.all) - 1, st.session_state.button_index)
 
         if st.session_state.button_index > 0:
             st.session_state.left_arrow = True

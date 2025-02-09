@@ -4,7 +4,7 @@ import os
 import streamlit as st
 from streamlit.delta_generator import DeltaGenerator
 
-from utils import read_css
+from utils import read_file
 
 
 @dataclass
@@ -19,8 +19,8 @@ class StFlashCard:
 
     def __init__(self, flash_card: FlashCard) -> None:
         self.__flash_card = flash_card
-        self.__flash_card_id = self.__flash_card.question
-        self.__css = read_css(
+        self.__flash_card_id = self.__flash_card.question.replace(" ", "_")
+        self.__css = read_file(
             os.path.join("components", "flash_card", "flash_card.css")
         )
 
@@ -47,6 +47,8 @@ class StFlashCard:
 
     def render(self, col: DeltaGenerator) -> None:
         st.markdown(self.__css, unsafe_allow_html=True)
-        col.button(
-            st.session_state[self.__button_text], on_click=self.__toggle, type="primary"
-        )
+        args = self.button_args()
+        col.button(args[0], on_click=args[1], type=args[2])
+
+    def button_args(self) -> list:
+        return [st.session_state[self.__button_text], self.__toggle, "primary"]

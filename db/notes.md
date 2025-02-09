@@ -2,47 +2,50 @@
 
 ### Overview
 - The sign of a number is stored as an additional piece of information.
-- This corresponds to the usual mathematical notation: 
+- This aligns with conventional mathematical notation: 
   - +3, -102
   
-### Representation
-- One bit, usually the left-most, is used for the sign:
-  - 0 represents positive (+)
-  - 1 represents negative (-)
-- The remainder of the sequence represents the absolute value of the number.
-  
-### Examples in 4-bit Representation
-- +3 is represented as `0011`
-- -3 is represented as `1011`
+### Structure
+- One bit (usually the left-most) is used for the sign.
+- Remaining bits represent the absolute value of the number.
+- 0 is used for positive (+) and 1 for negative (-).
 
-### Issues with Sign-Magnitude
-- **Arithmetic challenges**:
+### Examples
+- In a 4-bit representation:
+  - +3 is represented as `0011`
+  - -3 is represented as `1011`
+
+### Issues
+- **Arithmetic Limitations**:
   - Adding two positive numbers works.
   - Adding two negative numbers works.
-  - Adding a positive and a negative does not work as expected.
-- There are two representations for zero, leading to wasted representation:
-  - +0 is `0000`
-  - -0 is `1000`
+  - Adding a positive and negative number does not work.
+- **Redundant Zero Representation**:
+  - There are two representations for zero, wasting one possible value.
+
+---
 
 ## Excess Representation
 
 ### Overview
-- Excess representation ranges from `-2^(n-1)` to `2^(n-1) - 1`.
-
-### Example for n = 8
-- `00000000` represents -128
-- `11111111` represents 127
-
+- Starts at -2^(n-1) and extends to 2^(n-1) - 1.
+  
+### Example for n = 8 
+- `00000000` represents -128.
+- `11111111` represents 127.
+  
 ### Properties
-- Writing bit strings in alphanumeric order places 0 just below the middle, with positive numbers below and negatives above.
-- The bias for this system is 0.
+- When written in alphanumeric order:
+  - 0 is just below the middle.
+  - Positive numbers are below 0, while negatives are above.
+- The bias is 0.
 
 ### Arithmetic in Excess Representation
-- To compute \( x + y \):
-  1. Convert to excess: \( x + 2^{(n-1)} + y + 2^{(n-1)} \)
-  2. Subtract \( 2^{(n-1)} \)
-  3. Final result: \( x + y + 2^{(n-1)} \) (answer in excess representation)
-  4. Decode to get \( x + y \) (final answer)
+- While possible, it requires additional steps:
+  - For `x + y`, compute:
+    - `x + 2^(n-1) + y + 2^(n-1) - 2^(n-1)`
+  - Final result in excess representation must be decoded:
+    - `x + y` gives the final answer.
   
 ### Changing the Bias
-- It's possible to adjust the bias when using excess representation.
+- The bias can be adjusted when using excess representation.

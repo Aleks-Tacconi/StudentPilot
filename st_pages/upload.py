@@ -1,6 +1,5 @@
 import os
 import streamlit as st
-import streamlit_scrollable_textbox as stx
 
 from .page import Page
 
@@ -8,9 +7,9 @@ from .page import Page
 
 class UploadPage(Page):
     def render(self) -> None:
-        st.title("Student Pilot ✈️ ")
-        st.title("Upload Your File")
+        st.title("Student Pilot")
         self.sep()
+        st.html("<h1>Upload Your File</h1>")
         st.html("<b>Please upload a file so we can generate some notes</b>")
         self.upload_handler()
 
@@ -20,23 +19,11 @@ class UploadPage(Page):
         if uploaded_file is not None:
             st.success("File uploaded successfully! Generating Flash Cards...")
             st.html("<br>")
-            self.preview_file(uploaded_file)
 
             self.remove_previous_files()
             self.save_uploaded_file(uploaded_file)
             self.create_flashcards()
             self.switch_to_status()
-
-    def preview_file(self, uploaded_file) -> None:
-        if "text" in uploaded_file.type:
-            file_content = uploaded_file.getvalue().decode("utf-8")
-        else:
-            file_content = "cannot preview pdf file"
-
-        preview = file_content
-        st.title("File Preview")
-        self.sep()
-        stx.scrollableTextbox(preview, height=500, border=False)
 
     def remove_previous_files(self) -> None:
         for file in os.listdir("uploaded_files"):

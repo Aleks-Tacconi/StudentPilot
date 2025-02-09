@@ -1,11 +1,11 @@
-def upload_Summmarised_notes(self):
+def upload_Summmarised_notes():
         
         uploaded_file = st.file_uploader("Choose a file", type=["txt"])
 
         if uploaded_file is not None:
             st.success("File uploaded successfully!")
-            self.save_uploaded_file(uploaded_file)
-            content = self.read_file_content(uploaded_file)  # Capture content
+            
+            content = uploaded_file # Capture content
 
             # Proceed with OpenAI API call if content is not None
             if content:
@@ -20,5 +20,5 @@ def upload_Summmarised_notes(self):
                 st.markdown(notes)
                 
 
-            return uploaded_file
+            return notes
         return None

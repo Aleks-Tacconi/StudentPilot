@@ -1,10 +1,10 @@
-1. {What is a word in the context of computer architecture?}%%%%%{A word is a fixed-sized unit of data that a processor can handle as a single unit.}
-2. {What is the largest number that a 64-bit word can hold?}%%%%%{The largest number that a 64-bit word can hold is 2^64 - 1.}
-3. {How many bits are in a byte?}%%%%%{A byte consists of 8 bits.}
-4. {What is the range of values represented by a signed byte in Java?}%%%%%{A signed byte in Java represents values from -128 to 127.}
-5. {In sign-magnitude representation, how is the sign of a number indicated?}%%%%%{The sign of a number is indicated by the left-most bit, with 0 representing positive and 1 representing negative.}
-6. {What problem arises when adding two negative numbers using sign-magnitude representation?}%%%%%{Adding two negative numbers does not work properly in sign-magnitude representation.}
-7. {What does excess representation allow for in terms of the range of numbers?}%%%%%{Excess representation allows for representation of numbers starting from -2^(n-1) to 2^(n-1) - 1.}
-8. {In an 8-bit excess representation, what does the bit string 00000000 represent?}%%%%%{In an 8-bit excess representation, the bit string 00000000 represents -128.}
-9. {What is the bias in excess representation, and how is it significant?}%%%%%{The bias in excess representation is 0, and it determines the offset from zero for the encoded numbers.}
-10. {What must be done to perform addition in excess representation?}%%%%%{To perform addition in excess representation, you must offset both numbers by adding 2^(n-1) to each before adding them and then subtract 2^(n-1) from the result.}
+1. {What is a word in the context of computer processing?}%%%%%{A word is a fixed-sized unit of data that a processor can handle as a single unit.}
+2. {What size of unsigned integers can be easily represented in binary?}%%%%%{Unsigned integers, which are non-negative integer numbers.}
+3. {What is the largest number that a 64-bit word can hold?}%%%%%{The largest number that a 64-bit word can hold is 2^64-1.}
+4. {How many bits are in a byte?}%%%%%{A byte consists of 8 bits.}
+5. {What is the largest byte-sized number in decimal?}%%%%%{The largest byte-sized number is 255, which is 2^8-1 in binary.}
+6. {What are the four integer types specified in Java and their bit sizes?}%%%%%{int: 32 bits; byte: 8 bits; short: 16 bits; long: 64 bits.}
+7. {What is the issue with sign-magnitude representation?}%%%%%{The issue with sign-magnitude representation includes arithmetic problems, such as adding two negative numbers not producing the correct result, and having two representations for zero, wasting a representation.}
+8. {What does excess representation do with the range of numbers?}%%%%%{Excess representation starts at -2^n-1 and goes up to 2^n-1 -1.}
+9. {In excess representation for n = 8, what does the bit string 00000000 represent?}%%%%%{In excess representation for n = 8, 00000000 represents -128.}
+10. {What is the bias in excess representation when the bit strings are written in alphanumeric order?}%%%%%{The bias is 0 in excess representation when the bit strings are written in alphanumeric order.}

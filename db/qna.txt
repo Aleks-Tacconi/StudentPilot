@@ -1,10 +1,10 @@
-1. What is sign-magnitude representation?%%%%%Sign-magnitude representation is a method of storing the sign of a number as an additional piece of information, using a specific bit for the sign and the remaining bits for the absolute value of the number.
-2. How is the sign of a number indicated in sign-magnitude representation?%%%%%The sign of a number is indicated using one bit, where 0 represents a positive number (+) and 1 represents a negative number (-).
-3. In a 4-bit sign-magnitude representation, how is +3 represented?%%%%%+3 is represented as 0011 in a 4-bit sign-magnitude representation.
-4. What is the representation of -102 in sign-magnitude, assuming sufficient bits?%%%%%-102 would be represented with the highest order bit set to 1, and the absolute value of 102 in binary in the remaining bits, but a 4-bit representation is insufficient for -102.
-5. How is -3 represented in a 4-bit sign-magnitude format?%%%%%-3 is represented as 1011 in a 4-bit sign-magnitude representation.
-6. What binary value would represent +0 in sign-magnitude representation?%%%%%In a 4-bit sign-magnitude representation, +0 would be represented as 0000.
-7. Can you represent both -3 and +3 in a 4-bit sign-magnitude format without overlap?%%%%%Yes, -3 can be represented as 1011 and +3 can be represented as 0011, so there is no overlap.
-8. What is the significance of using the left-most bit in sign-magnitude representation?%%%%%The left-most bit is used to denote the sign of the number, indicating whether the number is positive or negative.
-9. In sign-magnitude representation, what does a binary value of 1100 signify?%%%%%In a 4-bit sign-magnitude representation, 1100 would represent -0, which is typically not used, as -0 is equivalent to +0.
-10. How would a 5-bit sign-magnitude representation format the number -5?%%%%%-5 would be represented as 10101 in a 5-bit sign-magnitude format, where the left-most bit denotes the negative sign and the remaining bits represent the absolute value of 5 (which is 0101 in binary).
+1. What is a word in the context of computer data?%%%%%A word is a fixed-sized unit of data that a processor can handle as a single unit.
+2. What is the largest number that a 64-bit word can hold in unsigned representation?%%%%%The largest number that a 64-bit word can hold is 2^64-1.
+3. How many bits are in a byte?%%%%%A byte is 8 bits.
+4. What is the largest byte-sized number represented in binary?%%%%%The largest byte-sized number is 255, which is represented as binary 11111111.
+5. What is the default integer type in Java and how many bits does it use?%%%%%The default integer type in Java is int, which uses 32 bits.
+6. Describe the sign-magnitude representation method for negative numbers.%%%%%In sign-magnitude representation, one of the bits (usually the left-most) indicates the sign (0 for positive and 1 for negative), while the remaining bits represent the absolute value of the number.
+7. What is a limitation of the sign-magnitude representation when performing arithmetic?%%%%%A limitation is that adding two negative numbers does not work correctly, and it also has the issue of representing two different zeros.
+8. What range of values does excess representation cover if n = 8?%%%%%If n = 8, excess representation covers values from -128 (00000000) to 127 (11111111).
+9. How is arithmetic performed with excess representation?%%%%%To perform arithmetic in excess representation, you must add x + 2^(n-1) and y + 2^(n-1), then subtract 2^(n-1) from the result.
+10. Can the bias be changed when using excess representation?%%%%%Yes, it is possible to change the bias when using excess representation.

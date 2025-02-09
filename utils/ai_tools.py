@@ -56,7 +56,7 @@ def generate_summmarised_notes(content: str) -> str:
         messages=[
             {
                 "role": "system",
-                "content": f"summarise the following in markdown, split it up into sections with headings and bullet points: {content}",
+                "content": f"summarise the following in markdown, split it up into sections with headings (h2 and h3) and bullet points: {content}",
             }
         ],
     )

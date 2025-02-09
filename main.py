@@ -12,21 +12,34 @@ from st_pages import FlashCardsPage
 def gen_flashcards() -> None:
     with open(os.path.join("db", "qna.txt"), mode="r", encoding="utf-8") as f:
         for line in f.readlines():
-            question, answer = line.strip().split("%%%%%")
+            try:
+                question, answer = line.strip().split("%%%%%")
 
-            if question.endswith("."):
-                question = question[: len(question) - 1]
-            if answer.endswith("."):
-                answer = answer[: len(answer) - 1]
+                if question.endswith("."):
+                    question = question[: len(question) - 1]
+                if answer.endswith("."):
+                    answer = answer[: len(answer) - 1]
 
-            question = question.replace("`", "")
-            answer = answer.replace("`", "")
+                if question.endswith("}"):
+                    question = question[: len(question) - 1]
+                if answer.endswith("}"):
+                    answer = answer[: len(answer) - 1]
 
-            if question != "Error":
-                flash_card = FlashCard(question, answer)
-                StFlashCard(flash_card)
+                if question.startswith("{"):
+                    question = question[1:]
+                if answer.startswith("{"):
+                    answer = answer[1:]
 
-    if StFlashCard.all == []:
+                question = question.replace("`", "")
+                answer = answer.replace("`", "")
+
+                if question != "Error":
+                    flash_card = FlashCard(question, answer)
+                    StFlashCard(flash_card)
+            except ValueError:
+                pass
+
+    if not StFlashCard.all:
         flash_card = FlashCard(" ", " ")
         StFlashCard(flash_card)
 

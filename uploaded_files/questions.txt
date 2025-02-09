@@ -1,3 +1,33 @@
+Words
+A word is a fixed-sized unit of data that a processor can handle as a single unit
+So far we have discussed unsigned integers: non-negative integer numbers.
+These can be represented easily in binary but
+Computers are finite
+Need negative numbers, fractions etc.
+There is a limit on the size of numbers a computer can represent. In practice the number of digits which is used to represent a number, the word size, is specified.
+Computer memory is usually divided into words
+Modern general purpose computers are typically 32-bit or 64-bit, but 16-bit machines are used and embedded systems often have other word sizes
+The largest number that a 64-bit word con hold is 2^64-1 
+
+Byte
+Sometimes a word holds several numbers, e.g. machine instructions, and sometimes a number is represented using two or more words (allowing larger numbers to be represented on smaller word length machines)
+
+A byte = 8 bits
+Binary 00000000 is 0, …, binary 11111111 is 255
+The largest byte-sized number is 255 = 2^8-1
+
+A half byte = 4 bits
+Binary 1111 is 15
+
+Java integer types
+In java we can specify the integer representation:
+int: the default, uses 32 bits.
+byte: only uses 8 bits,
+short: uses 16 bits, saving memory but restricting the size of integer that can be used
+long: uses 64 bit integer representation, allowing larger values but with an efficiency impact in a 32 bit environment
+We need negative integers. For bytes this usually means using -8 to 7 rather than 0 to 15, etc
+We consider several possible representations that support negative numbers.
+
 Sign-magnitude representation
 The sign of a number is stored as an additional piece of information.
 This corresponds to our usual mathematical notation
@@ -7,3 +37,25 @@ We use 0 for + and 1 for -
 In a 4-bit representation
 +3 is represented as 0011
 -3 is represented as 1011
+The issue with this approach is arithmetic:
+Adding two positive numbers works
+Adding two negative numbers works
+Adding two negative does not work
+Another issue with this approach is that there is two 0’s which is wasting a representation
+
+Excess representation
+Excess representation starts at -2n-1 and goes up to 2n-1 -1
+If n = 8 we have 
+00000000 represents -128
+11111111 represents 127
+If we write the bit strings in alphanumeric order, 0 will be just below the middle, with the positive numbers below and the negatives above. The bias is 0
+Its possible to do arithmetic with excess, but its not natural:
+In order to do x + y you have to do:
+x + 2n-1 + y + 2n - 1
+subtract 2n - 1
+x + y + 2n - 1             ->  answer in excess representation
+decode
+x + y                         -> answer
+(double check)
+You can also change the bias when using excess representation
+

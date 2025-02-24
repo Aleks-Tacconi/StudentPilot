@@ -1,4 +1,5 @@
-# Royal Holloway Hackathon 2025 - Student Pilot
+# Student Pilot
+## Submission to the Royal Hackaway v8 Hackathon 
 
 ![Project Image](assets/image.png)
 

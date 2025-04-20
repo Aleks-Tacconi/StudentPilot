@@ -29,7 +29,7 @@ Follow these steps to set up and run the project:
    ```
 2. **Navigate to the project directory:**
    ```sh
-   cd Hackathon-RoyalHolloway2025
+   cd StudentPilot
    ```
 3. **Create and activate a virtual environment:**
    ```sh

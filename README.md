@@ -54,11 +54,6 @@ Follow these steps to set up and run the project:
 Once the server starts, open your browser and navigate to `http://localhost:8501` to use the application.
 
 ## Team Members
-- **Aleksander Tacconi** - [GitHub](https://github.com/Aleks-Tacconi)
-- **Christopher White** - [GitHub](https://github.com/christopherwhite06)
-- **Fawwaz Ahmed** - [GitHub](https://github.com/fawwaz1123)
-- **Jessica Kanikaram** - [GitHub](https://github.com/jessicakanik)
-
 <a href="https://github.com/Aleks-Tacconi">![GitHub](https://img.shields.io/badge/GitHub-Aleksander_Tacconi-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
 <a href="https://github.com/christopherwhite06">![GitHub](https://img.shields.io/badge/GitHub-Christopher_White-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
 <a href="https://github.com/fawwaz1123">![GitHub](https://img.shields.io/badge/GitHub-Fawwaz_Ahmed-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>

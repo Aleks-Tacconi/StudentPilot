@@ -1,8 +1,6 @@
 # Student Pilot
 ## Submission to the Royal Hackaway v8 Hackathon 
 
-![Project Image](assets/image.png)
-
 ## About
 Student Pilot is an AI-powered study tool that transforms your text files into interactive study cards and notes. Simply upload a file, and our AI extracts key questions and answers to generate flashcards, helping you reinforce your learning efficiently.
 
@@ -60,6 +58,11 @@ Once the server starts, open your browser and navigate to `http://localhost:8501
 - **Christopher White** - [GitHub](https://github.com/christopherwhite06)
 - **Fawwaz Ahmed** - [GitHub](https://github.com/fawwaz1123)
 - **Jessica Kanikaram** - [GitHub](https://github.com/jessicakanik)
+
+<a href="https://github.com/Aleks-Tacconi">![GitHub](https://img.shields.io/badge/GitHub-Aleksander_Tacconi-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
+<a href="https://github.com/christopherwhite06">![GitHub](https://img.shields.io/badge/GitHub-Christopher_White-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
+<a href="https://github.com/fawwaz1123">![GitHub](https://img.shields.io/badge/GitHub-Fawwaz_Ahmed-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
+<a href="https://github.com/jessicakanik">![GitHub](https://img.shields.io/badge/GitHub-Jessica_Kanikaram-blue?logo=github&logoColor=white&style=for-the-badge)</a><br>
 
 ## Devpost Submission
 For more details and contributions, visit our [Devpost project page](https://devpost.com/software/ai-flashcards-6fjodu?ref_content=my-projects-tab&ref_feature=my_projects).
